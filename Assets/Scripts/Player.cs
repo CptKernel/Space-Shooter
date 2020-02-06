@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float speed = 3.5f;
+
     // Start is called before the first frame update
     void Start()
     {
-        //Take current position = new position (0, 0, 0)
+        // This will make the player start at (0, 0, 0).  
         transform.position = new Vector3(0, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.right * 5 * Time.deltaTime);
+        // We want variables here so we dont have to manually adjust speed all of the time.
+        transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 }
