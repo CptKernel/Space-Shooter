@@ -17,7 +17,11 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
         // We want variables here so we dont have to manually adjust speed all of the time.
-        transform.Translate(Vector3.right * _speed * Time.deltaTime);
+
+        Vector3 direction = new Vector3(horizontalInput, verticalInput, 0);
+        transform.Translate(direction * _speed * Time.deltaTime);
     }
 }
