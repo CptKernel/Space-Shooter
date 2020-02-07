@@ -45,7 +45,5 @@ public class Enemy : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
-
-        Debug.Log("Hit: " + other.transform.name);
     }
 }
