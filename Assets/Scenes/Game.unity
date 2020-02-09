@@ -487,6 +487,9 @@ MonoBehaviour:
     type: 3}
   _fireRate: 0.5
   _lives: 3
+  _tripleShotActive: 0
+  _tripleShotPrefab: {fileID: 347136185440793588, guid: fa87aed5d2d4e184ea06ba653ba798f5,
+    type: 3}
 --- !u!212 &2088269730
 SpriteRenderer:
   m_ObjectHideFlags: 0

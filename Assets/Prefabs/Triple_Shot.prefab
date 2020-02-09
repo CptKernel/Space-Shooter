@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8245041168590212483}
   m_Layer: 0
   m_Name: Triple_Shot
-  m_TagString: Untagged
+  m_TagString: Laser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347136185440793588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.8267784, y: 0.7687364, z: -4.2177734}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7747723866792639361}
@@ -48,17 +48,17 @@ PrefabInstance:
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04377842
+      value: -0.785
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1147364
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.2177734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
@@ -123,17 +123,17 @@ PrefabInstance:
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6097784
+      value: 0.785
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.1147364
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.2177734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
@@ -198,17 +198,17 @@ PrefabInstance:
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.8267784
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28126353
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.2177734
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1360786201489628949, guid: 8a5c5ff570eabd042811e7df8b676105,
         type: 3}
