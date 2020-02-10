@@ -102,7 +102,5 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(_powerUpDuration);
         _tripleShotActive = false;
-
-        Debug.Log("Triple shot Deactivated");
     }
 }
