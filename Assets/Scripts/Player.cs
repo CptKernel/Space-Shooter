@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private bool _tripleShotActive = false;
     [SerializeField]
     private GameObject _tripleShotPrefab;
+    [SerializeField]
+    private float _powerUpDuration = 5.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -93,5 +95,14 @@ public class Player : MonoBehaviour
     public void TripleShotPowerup()
     {
         _tripleShotActive = true;
+        StartCoroutine("TripleShotPowerDownRoutine");
+    }
+
+    IEnumerator TripleShotPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(_powerUpDuration);
+        _tripleShotActive = false;
+
+        Debug.Log("Triple shot Deactivated");
     }
 }
