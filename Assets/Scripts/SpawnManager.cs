@@ -32,11 +32,6 @@ public class SpawnManager : MonoBehaviour
 
     }
 
-
-    // Spawn game objects every 5 seconds.
-    // Create a coroutine of type IEnumerator -- Yield Events
-    // Use while loop 
-
     IEnumerator SpawnEnemyRoutine()
     {
         while (_stopSpawning == false)

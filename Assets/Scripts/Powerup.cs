@@ -18,7 +18,6 @@ public class Powerup : MonoBehaviour
     void Update()
     {
         CalculateMovement();
-        // Check for collision.
     }
 
     private void CalculateMovement()
