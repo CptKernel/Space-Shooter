@@ -89,4 +89,9 @@ public class Player : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void TripleShotPowerup()
+    {
+        _tripleShotActive = true;
+    }
 }
