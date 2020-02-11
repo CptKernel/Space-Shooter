@@ -50,7 +50,7 @@ public class Powerup : MonoBehaviour
                         player.TripleShotPowerup();
                         break;
                     case 1:
-                        Debug.Log("Collected Speed Boost");
+                        player.SpeedPowerup();
                         break;
                     case 2:
                         Debug.Log("Collected Sheilds");
