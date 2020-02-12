@@ -13,6 +13,7 @@ public class UIManager : MonoBehaviour
     private Image _livesImage;
     [SerializeField]
     private Text _gameOverText;
+    private bool _isGameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,19 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         _gameOverText.gameObject.SetActive(true);
-        Debug.Log("Hit game over");
+        _isGameOver = true;
+        StartCoroutine("GameOverFlickerControl");
+        
+    }
+
+    IEnumerator GameOverFlickerControl()
+    {
+        bool textOn = true;
+        while (_isGameOver == true)
+        {
+            _gameOverText.gameObject.SetActive(textOn);
+            textOn = !textOn;
+            yield return new WaitForSeconds(1);
+        }
     }
 }
