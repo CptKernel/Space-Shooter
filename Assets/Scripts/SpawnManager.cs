@@ -50,7 +50,7 @@ public class SpawnManager : MonoBehaviour
         {
             Vector3 powerupSpawnLocation = new Vector3(Random.Range(-9.0f, 9.0f), 7.0f, 0);
             float waitTime = Random.Range(_powerupDelay, _powerupDelay + _powerupDelayRange);
-            int powerupSelection = Random.Range(0, 2);
+            int powerupSelection = Random.Range(0, 3);
             GameObject newTripleShotPowerup = Instantiate(powerups[powerupSelection], powerupSpawnLocation, Quaternion.identity);
             yield return new WaitForSeconds(waitTime);
         }
