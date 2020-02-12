@@ -102,14 +102,14 @@ public class Player : MonoBehaviour
 
     public void SpeedPowerup()
     {
-        _speed = _speed + _speedPowerupAmount;
+        _speed += _speedPowerupAmount;
         StartCoroutine("SpeedPowerDownRoutine");
     }
 
     IEnumerator SpeedPowerDownRoutine()
     {
         yield return new WaitForSeconds(_powerUpDuration);
-        _speed = _speed - _speedPowerupAmount;
+        _speed -= _speedPowerupAmount;
     }
 
     IEnumerator TripleShotPowerDownRoutine()
