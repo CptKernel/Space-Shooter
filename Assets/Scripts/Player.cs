@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
     private float _speedPowerupAmount = 3.5f;
     [SerializeField]
     private bool _shieldsActive = false;
+    [SerializeField]
+    private GameObject _shieldVisual;
 
     // Start is called before the first frame update
     void Start()
