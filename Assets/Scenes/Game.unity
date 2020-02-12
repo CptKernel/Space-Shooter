@@ -268,7 +268,7 @@ MonoBehaviour:
   powerups:
   - {fileID: 7758764792812358887, guid: 92750661e77f1db47bc578a4934728f4, type: 3}
   - {fileID: 8939925251447792569, guid: 4d0c24db4008cb94abb58fa9fce407cf, type: 3}
-  - {fileID: 0}
+  - {fileID: 6375903905210883258, guid: b77c12141c5a9cc47a2f1ee180a3b4e9, type: 3}
 --- !u!4 &1262776852
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +499,7 @@ MonoBehaviour:
     type: 3}
   _powerUpDuration: 5
   _speedPowerupAmount: 3.5
+  _shieldsActive: 0
 --- !u!212 &2088269730
 SpriteRenderer:
   m_ObjectHideFlags: 0

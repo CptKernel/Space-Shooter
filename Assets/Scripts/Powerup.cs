@@ -53,7 +53,7 @@ public class Powerup : MonoBehaviour
                         player.SpeedPowerup();
                         break;
                     case 2:
-                        Debug.Log("Collected Sheilds");
+                        player.ShieldsPowerup();
                         break;
                     default:
                         Debug.Log("Default Value");
