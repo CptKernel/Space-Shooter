@@ -94,6 +94,7 @@ public class Player : MonoBehaviour
         if (_shieldsActive == true)
         {
             _shieldsActive = false;
+            _shieldVisual.SetActive(false);
             return;
         }
 
@@ -123,6 +124,7 @@ public class Player : MonoBehaviour
     public void ShieldsPowerup()
     {
         _shieldsActive = true;
+        _shieldVisual.SetActive(true);
     }
 
     IEnumerator SpeedPowerDownRoutine()
