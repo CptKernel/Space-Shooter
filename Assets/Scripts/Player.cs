@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
     private GameObject _tripleShotPrefab;
     [SerializeField]
     private float _powerUpDuration = 5.0f;
+    [SerializeField]
+    private float _speedPowerupAmount = 3.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -96,6 +98,18 @@ public class Player : MonoBehaviour
     {
         _tripleShotActive = true;
         StartCoroutine("TripleShotPowerDownRoutine");
+    }
+
+    public void SpeedPowerup()
+    {
+        _speed += _speedPowerupAmount;
+        StartCoroutine("SpeedPowerDownRoutine");
+    }
+
+    IEnumerator SpeedPowerDownRoutine()
+    {
+        yield return new WaitForSeconds(_powerUpDuration);
+        _speed -= _speedPowerupAmount;
     }
 
     IEnumerator TripleShotPowerDownRoutine()
