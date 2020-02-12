@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -20,6 +21,16 @@ public class UIManager : MonoBehaviour
     {
         _scoreText.text = "Score: " + 0;
         _gameOverText.gameObject.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && _isGameOver == true)
+        {
+            _isGameOver = false;
+            SceneManager.LoadScene("Game");
+            Debug.Log("r pressed");
+        }
     }
 
     public void UpdateScore(int playerScore)
