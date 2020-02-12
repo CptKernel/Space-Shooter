@@ -22,6 +22,10 @@ public class Player : MonoBehaviour
     private float _powerUpDuration = 5.0f;
     [SerializeField]
     private float _speedPowerupAmount = 3.5f;
+    [SerializeField]
+    private bool _shieldsActive = false;
+    [SerializeField]
+    private GameObject _shieldVisual;
 
     // Start is called before the first frame update
     void Start()
@@ -84,6 +88,17 @@ public class Player : MonoBehaviour
 
     public void Damage()
     {
+        //if shields is active
+        // deactivate shields
+        // leave message, return
+        if (_shieldsActive == true)
+        {
+            _shieldsActive = false;
+            _shieldVisual.SetActive(false);
+            return;
+        }
+
+
         _lives--;
 
         if (_lives == 0)
@@ -104,6 +119,12 @@ public class Player : MonoBehaviour
     {
         _speed += _speedPowerupAmount;
         StartCoroutine("SpeedPowerDownRoutine");
+    }
+
+    public void ShieldsPowerup()
+    {
+        _shieldsActive = true;
+        _shieldVisual.SetActive(true);
     }
 
     IEnumerator SpeedPowerDownRoutine()
