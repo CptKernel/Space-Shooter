@@ -118,10 +118,13 @@ public class Player : MonoBehaviour
 
         _lives--;
 
+        _uiManager.UpdateLives(_lives);
+
         if (_lives == 0)
         {
             // Comunicate with spawn manager to stop spawning
             _spawnManager.OnPlayerDeath();
+            _uiManager.GameOver();
             Destroy(this.gameObject);
         }
     }
