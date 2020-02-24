@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text _gameOverText;
     private bool _isGameOver = false;
+    [SerializeField]
+    private Text _pressRToRestartText;
 
     // Start is called before the first frame update
     void Start()
@@ -25,12 +27,22 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
+        CheckGameState();
+    }
+
+    private void CheckGameState()
+    {
+        if (_isGameOver == true)
+        {
+            _pressRToRestartText.gameObject.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.R) && _isGameOver == true)
         {
             _isGameOver = false;
             SceneManager.LoadScene("Game");
             Debug.Log("r pressed");
         }
+
     }
 
     public void UpdateScore(int playerScore)

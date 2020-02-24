@@ -650,6 +650,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9fe6f40efddf0b64fb68a3382b14a4db, type: 3}
   _livesImage: {fileID: 452190347}
   _gameOverText: {fileID: 1229154556}
+  _pressRToRestartText: {fileID: 358503949}
 --- !u!1 &1160655921
 GameObject:
   m_ObjectHideFlags: 0
