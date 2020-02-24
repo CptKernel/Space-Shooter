@@ -26,16 +26,27 @@ public class Player : MonoBehaviour
     private bool _shieldsActive = false;
     [SerializeField]
     private GameObject _shieldVisual;
+    private UIManager _uiManager;
+
+    [SerializeField]
+    private int _score = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
         transform.position = new Vector3(0, 0, 0);
         _spawnManager = GameObject.Find("Spawn_Manager").GetComponent<SpawnManager>();
 
         if (_spawnManager == null)
         {
             Debug.LogError("The spawn manager is null");
+        }
+
+        if (_uiManager == null)
+        {
+            Debug.LogError("The UI manager is null");
         }
     }
 
@@ -86,6 +97,12 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void AddToScore(int points)
+    {
+        _score += points;
+        _uiManager.UpdateScore(_score);
+    }
+
     public void Damage()
     {
         //if shields is active
@@ -101,10 +118,13 @@ public class Player : MonoBehaviour
 
         _lives--;
 
+        _uiManager.UpdateLives(_lives);
+
         if (_lives == 0)
         {
             // Comunicate with spawn manager to stop spawning
             _spawnManager.OnPlayerDeath();
+            _uiManager.GameOver();
             Destroy(this.gameObject);
         }
     }
