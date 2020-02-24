@@ -17,6 +17,8 @@ public class UIManager : MonoBehaviour
     private bool _isGameOver = false;
     [SerializeField]
     private Text _pressRToRestartText;
+    [SerializeField]
+    private GameManager _gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -27,21 +29,6 @@ public class UIManager : MonoBehaviour
 
     private void Update()
     {
-        CheckGameState();
-    }
-
-    private void CheckGameState()
-    {
-        if (_isGameOver == true)
-        {
-            _pressRToRestartText.gameObject.SetActive(true);
-        }
-        if (Input.GetKeyDown(KeyCode.R) && _isGameOver == true)
-        {
-            _isGameOver = false;
-            SceneManager.LoadScene("Game");
-            Debug.Log("r pressed");
-        }
 
     }
 
@@ -60,6 +47,8 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         _gameOverText.gameObject.SetActive(true);
+        _pressRToRestartText.gameObject.SetActive(true);
+        _gameManager.GameOver();
         _isGameOver = true;
         StartCoroutine("GameOverFlickerControl");
         
